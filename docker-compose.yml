@@ -1,7 +1,7 @@
 version: "3"
 services:
   analysis:
-    image: jlopezper/basic_reproduction_number
+    image: jlopezper/basic_reproduction_number:analysis
     ports:
       - "8787:8787"
     volumes:
