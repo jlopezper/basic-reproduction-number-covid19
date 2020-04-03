@@ -1,0 +1,11 @@
+version: "1"
+services:
+  analysis:
+    image: jlopezper/basic_reproduction_number
+    ports:
+      - "8787:8787"
+    volumes:
+      - ".:/home/r_devs/basic_reproduction_number"
+    environment:
+      DISABLE_AUTH: "true"
+    working_dir: /home/r_devs/basic_reproduction_number
