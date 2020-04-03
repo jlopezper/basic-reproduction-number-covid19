@@ -1,5 +1,5 @@
 # Packrat
-packrat/lib*/
+packrat/*
 
 # History files
 .Rhistory
