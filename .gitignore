@@ -1,5 +1,6 @@
 # Packrat
 packrat/*
+!packrat/packrat.lock
 
 # History files
 .Rhistory
