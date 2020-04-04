@@ -3,6 +3,8 @@
 
 FROM rocker/verse:3.6.1
 
+ARG DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update
 
 COPY ./packrat/packrat.lock packrat/
