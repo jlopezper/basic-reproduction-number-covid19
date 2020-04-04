@@ -1,5 +1,5 @@
 
-# Basic reproductive number (R0) of the COVID-19 outbreak in Spain
+## Basic reproductive number (R0) of the COVID-19 outbreak in Spain
 
 Code repository with the aim of having an estimate of the evolution of
 the COVID-19 outbreak in the Spanish regions.
@@ -8,7 +8,7 @@ The code is developed entirely in R. The `drake` package is used to
 manage the workflow. This analysis can be run by cloning the repository
 and running the `make.R` file.
 
-## Disclaimer(\!)
+### Disclaimer(\!)
 
 This analysis is developed by an inexperienced person and has the
 **sole** objective of having a minimum idea of the potential evolution
@@ -20,7 +20,7 @@ work](https://cmmid.github.io/topics/covid19/current-patterns-transmission/globa
 that the London School of Hygiene and Tropical Medicine (among many
 others) is doing.
 
-## Assumptions
+### Assumptions
 
 The analysis focuses on the estimation of the [basic reproduction
 number](https://en.wikipedia.org/wiki/Basic_reproduction_number) for the
@@ -32,11 +32,12 @@ has a method (`uncertain_si`) in order to account for uncertainty on the
 serial interval distribution. Why was this method chosen?
 
 1.  It’s a new virus so a lot of research will be done in the coming
-    months.
-2.  Although it appears that many epidemiological models for viruses
-    with *similar behaviour* are modelled with a serial interval under a
-    Gamma distribution, this doesn’t seem to be entirely clear [in this
-    case](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article).
+    months. There’s no absolute evidence about the serial interval
+    distribution.
+2.  Although many epidemiological models for viruses with *similar
+    behaviour* are modelled with a serial interval under a Gamma or
+    Weibull distributions, this doesn’t seem to be entirely clear [in
+    this case](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article).
 3.  It’s true, as discussed in the article linked in point 2, that the
     virus can have a normally distributed serial interval and therefore
     not restricted to positive values. In this case, `EpiEstim` doesn’t
@@ -51,3 +52,39 @@ serial interval distribution. Why was this method chosen?
     truncated at
     <img src="http://www.sciweavers.org/tex2img.php?eq=%282.5%2C%206%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="(2.5, 6)" width="51" height="19" />
     is considered.
+
+### Reproducible analysis with Docker
+
+To run the analysis, a Docker image is provided that reproduces the
+results using the most updated information from the [Instituto de Salud
+Carlos III](https://covid19.isciii.es).
+
+*Note:* Depending on your configuration you might need to run the
+following commands with root privileges (with `sudo`).
+
+First [install docker](https://docs.docker.com/install/) and clone this
+repository:
+
+    git clone https://github.com/jlopezper/basic-reproduction-number-covid19.git
+
+Navigate to the cloned repository on your own machine, and launch the
+container:
+
+    cd /path/to/repo
+    docker-compose up -d
+
+Enter the container:
+
+    docker exec -it basic-reproduction-number-covid19_analysis_1 bash
+
+When the process ends, exit the container:
+
+    exit
+    docker-compose down
+
+Finally, you will find the results within the `plots` directory\!
+
+### Useful resources
+
+  - [Docker and
+    Packrat](https://www.joelnitta.com/post/docker-and-packrat/)
