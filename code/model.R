@@ -82,6 +82,10 @@ plot_model <-
 
 save_plot <- 
   function(plot, ccaa_code = NULL) {
+    if (!dir.exists(here('plots'))){
+      dir.create(here('plots'))
+    }
+    
     if (is.null(ccaa_code)) ccaa_code <- "all"
     ggsave(plot = plot, filename = here("plots", paste0("basic_reproduction_number_", ccaa_code, ".png")), width = 10, height = 7)
   }
