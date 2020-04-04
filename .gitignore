@@ -45,5 +45,8 @@ vignettes/*.pdf
 # pkgdown site 
 docs/
 
+# Rprofile
 .Rprofile
-packrat/lib*/
+
+# Readme folder
+/README_*
