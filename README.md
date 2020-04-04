@@ -84,6 +84,8 @@ When the process ends, exit the container:
 
 Finally, you will find the results within the `plots` directory\!
 
+![Image](https://i.imgur.com/K2XFYBQ.png)
+
 ### Useful resources
 
   - [Docker and
