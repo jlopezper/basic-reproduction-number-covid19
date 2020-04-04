@@ -1,5 +1,5 @@
 
-## Basic reproductive number (R0) of the COVID-19 outbreak in Spain
+## Basic reproduction number (R0) of the COVID-19 outbreak in Spain
 
 Code repository with the aim of having an estimate of the evolution of
 the COVID-19 outbreak in the Spanish regions.
