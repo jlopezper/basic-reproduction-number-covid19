@@ -8,17 +8,16 @@ The code is developed entirely in R. The `drake` package is used to
 manage the workflow. This analysis can be run by cloning the repository
 and running the `make.R` file.
 
-### Disclaimer(\!)
+### Disclaimer (\!)
 
-This analysis is developed by an inexperienced person and has the
-**sole** objective of having a minimum idea of the potential evolution
-of the outbreak in Spain. **Under no circumstances** this is intended to
-be a reference study with which to take any health decision. If you are
-a person with some responsibility in this regard, you do better by
-leaving this site and taking a look at the [excellent
+This analysis is developed by a layman and has the **sole** objective of
+having a minimum idea of the potential evolution of the outbreak in
+Spain. **Under no circumstances** this is intended to be a reliable
+study with which to take any health decision. If you want to figure out
+how experts are modelling this, I strongly recommend taking a look at
+the [excellent
 work](https://cmmid.github.io/topics/covid19/current-patterns-transmission/global-time-varying-transmission.html)
-that the London School of Hygiene and Tropical Medicine (among many
-others) is doing.
+that the London School of Hygiene and Tropical Medicine is doing.
 
 ### Assumptions
 
