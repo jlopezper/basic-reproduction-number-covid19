@@ -24,7 +24,7 @@ others) is doing.
 
 The analysis focuses on the estimation of the [basic reproduction
 number](https://en.wikipedia.org/wiki/Basic_reproduction_number) for the
-Spanish regions. The
+Spanish regions based on the **confirmed cases** by region. The
 [`EpiEstim`](https://cran.r-project.org/web/packages/EpiEstim/index.html)
 package is used for this purporse. In particular, this
 [package](https://cran.r-project.org/web/packages/EpiEstim/vignettes/demo.html)
@@ -43,15 +43,18 @@ serial interval distribution. Why was this method chosen?
     not restricted to positive values. In this case, `EpiEstim` doesn’t
     consider distributions with real domain [for the time
     being](https://github.com/annecori/EpiEstim/issues/90), so in this
-    analysis a normal distribution with
-    <img src="http://www.sciweavers.org/tex2img.php?eq=%20%5Cmu%20%20%5Csim%20N%283.96%2C%202%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt=" \mu  \sim N(3.96, 2)" width="107" height="19" />
+    analysis the following normal distribution is
+    considered:
+
+<!-- end list -->
+
+  - <img src="http://www.sciweavers.org/tex2img.php?eq=%5Cmu%20%5Csim%20%7B%5Csf%20N%7D%283.96%2C%202%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="\mu \sim {\sf N}(3.96, 2)" width="104" height="19" />
     truncated at
-    <img src="http://www.sciweavers.org/tex2img.php?eq=%281%2C%206%29%20&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="(1, 6) " width="39" height="19" />
-    and
-    <img src="http://www.sciweavers.org/tex2img.php?eq=%20%5Csigma%20%20%5Csim%20N%284.75%2C%201%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt=" \sigma  \sim N(4.75, 1)" width="106" height="19" />
+    <img src="http://www.sciweavers.org/tex2img.php?eq=%281%2C%206%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="(1, 6)" width="39" height="19" />
+
+  - <img src="http://www.sciweavers.org/tex2img.php?eq=%5Csigma%20%5Csim%20%7B%5Csf%20N%7D%284.75%2C%201%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="\sigma \sim {\sf N}(4.75, 1)" width="103" height="19" />
     truncated at
     <img src="http://www.sciweavers.org/tex2img.php?eq=%282.5%2C%206%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="(2.5, 6)" width="51" height="19" />
-    is considered.
 
 ### Reproducible analysis with Docker
 
@@ -84,7 +87,7 @@ When the process ends, exit the container:
 
 Finally, you will find the results within the `plots` directory\!
 
-![Image](https://i.imgur.com/K2XFYBQ.png)
+![Image](https://i.imgur.com/GQNCv8M.png)
 
 ### Useful resources
 
