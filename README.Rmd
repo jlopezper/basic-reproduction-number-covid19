@@ -25,9 +25,9 @@ The analysis focuses on the estimation of the [basic reproduction number](https:
 2. Although many epidemiological models for viruses with *similar behaviour* are modelled with a serial interval under a Gamma or Weibull distributions, this doesn't seem to be entirely clear [in this case](https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article).
 3. It's true, as discussed in the article linked in point 2, that the virus can have a normally distributed serial interval and therefore not restricted to positive values. In this case, `EpiEstim` doesn't consider distributions with real domain [for the time being](https://github.com/annecori/EpiEstim/issues/90), so in this analysis the following normal distribution is considered:
 
-- <img src="http://www.sciweavers.org/tex2img.php?eq=%5Cmu%20%5Csim%20%7B%5Csf%20N%7D%283.96%2C%202%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="\mu \sim {\sf N}(3.96, 2)" width="104" height="19" /> truncated at <img src="http://www.sciweavers.org/tex2img.php?eq=%281%2C%206%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="(1, 6)" width="39" height="19" />
+- ![equation](https://latex.codecogs.com/gif.latex?%5Cmu%20%5Csim%20N%283.96%2C%202%29) truncated at ![equation](https://latex.codecogs.com/gif.latex?%5B1%2C%206%5D)
 
-- <img src="http://www.sciweavers.org/tex2img.php?eq=%5Csigma%20%5Csim%20%7B%5Csf%20N%7D%284.75%2C%201%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="\sigma \sim {\sf N}(4.75, 1)" width="103" height="19" /> truncated at <img src="http://www.sciweavers.org/tex2img.php?eq=%282.5%2C%206%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="(2.5, 6)" width="51" height="19" />
+- ![equation](https://latex.codecogs.com/gif.latex?%5Csigma%20%5Csim%20N%284.75%2C%201%29) truncated at ![equation](https://latex.codecogs.com/gif.latex?%5B2.5%2C%206%5D)
  
 ### Reproducible analysis with Docker
 

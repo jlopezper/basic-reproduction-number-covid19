@@ -48,13 +48,13 @@ serial interval distribution. Why was this method chosen?
 
 <!-- end list -->
 
-  - <img src="http://www.sciweavers.org/tex2img.php?eq=%5Cmu%20%5Csim%20%7B%5Csf%20N%7D%283.96%2C%202%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="\mu \sim {\sf N}(3.96, 2)" width="104" height="19" />
+  - ![equation](https://latex.codecogs.com/gif.latex?%5Cmu%20%5Csim%20N%283.96%2C%202%29)
     truncated at
-    <img src="http://www.sciweavers.org/tex2img.php?eq=%281%2C%206%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="(1, 6)" width="39" height="19" />
+    ![equation](https://latex.codecogs.com/gif.latex?%5B1%2C%206%5D)
 
-  - <img src="http://www.sciweavers.org/tex2img.php?eq=%5Csigma%20%5Csim%20%7B%5Csf%20N%7D%284.75%2C%201%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="\sigma \sim {\sf N}(4.75, 1)" width="103" height="19" />
+  - ![equation](https://latex.codecogs.com/gif.latex?%5Csigma%20%5Csim%20N%284.75%2C%201%29)
     truncated at
-    <img src="http://www.sciweavers.org/tex2img.php?eq=%282.5%2C%206%29&bc=White&fc=Black&im=jpg&fs=12&ff=modern&edit=0" align="center" border="0" alt="(2.5, 6)" width="51" height="19" />
+    ![equation](https://latex.codecogs.com/gif.latex?%5B2.5%2C%206%5D)
 
 ### Reproducible analysis with Docker
 
