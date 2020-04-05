@@ -75,9 +75,10 @@ container:
     cd /path/to/repo
     docker-compose up -d
 
-Enter the container:
+Enter the container and run the `make.R` file:
 
     docker exec -it basic-reproduction-number-covid19_analysis_1 bash
+    Rscript make.R
 
 When the process ends, exit the container:
 
